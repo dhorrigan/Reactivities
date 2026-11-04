@@ -8,15 +8,15 @@ import Counter from "../../features/counter/Counter";
 
 export const router = createBrowserRouter([
     {
-        path: "/",
+        path: '/',
         element: <App />,
         children: [
-            { path: "", element: <HomePage /> },
-            { path: "activities", element: <ActivityDashboard /> },
-            { path: "activities/:id", element: <ActivityDetailPage /> },
-            { path: "createActivity", element: <ActivityForm key='create' /> },
-            { path: "manage/:id", element: <ActivityForm /> },
-            { path: "counter", element: <Counter /> }
+            { path: '', element: <HomePage /> },
+            { path: 'activities', element: <ActivityDashboard /> },
+            { path: 'activities/:id', element: <ActivityDetailPage /> },
+            { path: 'createActivity', element: <ActivityForm key='create' /> },
+            { path: 'manage/:id', element: <ActivityForm /> },
+            { path: 'counter', element: <Counter /> },
         ]
     }
 ])

@@ -2,8 +2,8 @@ import { CalendarToday, Info, Place } from "@mui/icons-material";
 import { Divider, Grid, Paper, Typography } from "@mui/material";
 import { formatDate } from "../../../lib/util/util";
 
-type Props={
-  activity: Activity
+type Props = {
+    activity: Activity
 }
 
 export default function ActivityDetailsInfo({activity}: Props) {
