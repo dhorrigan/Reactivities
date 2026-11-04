@@ -4,11 +4,9 @@ import { useActivities } from "../../../lib/hooks/useActivities";
 import { useNavigate, useParams } from "react-router";
 
 export default function ActivityForm() {
-
     const {id} = useParams();
     const { updateActivity, createActivity, activity, isLoadingActivity } = useActivities(id);
     const navigate = useNavigate();
-
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
