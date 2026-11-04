@@ -20,7 +20,7 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline / Middleware
 app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod()
-    .WithOrigins("http://localhost:3000", "https://localhost:3000", "https://localhost:3001"));
+    .WithOrigins("http://localhost:3000", "https://localhost:3000", "https://localhost:3001", "https://localhost:3002", "http://localhost:3002"));
 app.MapControllers();
 
 // this will allow us to use AppDbContext before the app.Run() starts listening for requests
