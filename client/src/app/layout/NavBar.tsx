@@ -8,7 +8,6 @@ import { Observer } from "mobx-react-lite";
 export default function NavBar() {
     const { uiStore } = useStore();
 
-
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static"
