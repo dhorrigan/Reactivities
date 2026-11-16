@@ -16,10 +16,10 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 });
 builder.Services.AddCors();
 builder.Services.AddMediatR(x => {
-        x.RegisterServicesFromAssemblyContaining<GetActivityList.Handler>();
-        x.AddOpenBehavior(typeof(ValidationBehavior<,>));
-    });
-    
+    x.RegisterServicesFromAssemblyContaining<GetActivityList.Handler>();
+    x.AddOpenBehavior(typeof(ValidationBehavior<,>));
+});
+
 builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 builder.Services.AddValidatorsFromAssemblyContaining<CreateActivityValidator>();
 builder.Services.AddTransient<ExceptionMiddleware>();
@@ -46,7 +46,7 @@ try
 catch (Exception ex)
 {
     var logger = services.GetRequiredService<ILogger<Program>>();
-    logger.LogError(ex, "An error occurred during migration");
+    logger.LogError(ex, "An error occurred during migration.");
 }
 
 app.Run();

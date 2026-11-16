@@ -29,8 +29,8 @@ public class CreateActivity
 
             var result = await context.SaveChangesAsync(cancellationToken) > 0;
 
-            if (!result) return Result<string>.Failure("Failed to create activity", 400);
-            
+            if (!result) return Result<string>.Failure("Failed to create the activity", 400);
+
             return Result<string>.Success(activity.Id);
         }
     }

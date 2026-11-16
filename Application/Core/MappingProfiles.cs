@@ -1,7 +1,7 @@
 using System;
+using Application.Activities.DTOs;
 using AutoMapper;
 using Domain;
-using Application.Activities.DTOs;
 
 namespace Application.Core;
 

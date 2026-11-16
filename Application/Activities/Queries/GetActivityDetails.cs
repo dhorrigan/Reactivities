@@ -8,10 +8,9 @@ namespace Application.Activities.Queries;
 
 public class GetActivityDetails
 {
-
     public class Query : IRequest<Result<Activity>>
     {
-        public required string Id { get; set; } = string.Empty;
+        public required string Id { get; set; }
     }
 
     public class Handler(AppDbContext context) : IRequestHandler<Query, Result<Activity>>
@@ -24,5 +23,5 @@ public class GetActivityDetails
 
             return Result<Activity>.Success(activity);
         }
-    } 
+    }
 }

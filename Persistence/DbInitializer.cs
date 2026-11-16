@@ -7,7 +7,6 @@ public class DbInitializer
 {
     public static async Task SeedData(AppDbContext context)
     {
-
         if (context.Activities.Any()) return;
 
         var activities = new List<Activity>
