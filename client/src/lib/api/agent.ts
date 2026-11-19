@@ -31,8 +31,9 @@ agent.interceptors.response.use(
         const { status, data } = error.response;
         switch (status) {
             case 400:
-                // toast.error('bad request');
-                // console.log('Bad Request');
+                 toast.error('bad request');
+                 //console.log('Bad Request');
+                 console.log(data);
                 // the Fluent data validation in API returns an object with errors for each field
                 // we collect all the errors and throw them as a flat array
                 if (data.errors) {
